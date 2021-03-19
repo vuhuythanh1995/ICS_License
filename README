@@ -1,0 +1,15 @@
+- get_data: 
+    + copy this file to customer pc to get mac, disk serial, machine id and cpu id info to make data.txt file
+    + run: ./get_data bond0
+- get_license: 
+    + keep in secret, take data.txt from customer's pc then generate license.cfg file.
+    + run: ./get_license data.txt
+    + copy license.cfg into opconsole/config/license folder of customer's pc.
+- bash: 
+    + run app
+- app:
+    + check plain text against the machine's hashcode
+    + run: ./bash
+- Makefile : 
+    + make get_data , get_license , app. 
+
